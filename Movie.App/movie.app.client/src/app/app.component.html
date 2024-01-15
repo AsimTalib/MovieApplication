@@ -1,0 +1,43 @@
+<h1 id="tableLabel">Movies</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!weatherforecasts"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<table *ngIf="weatherforecasts">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>ReleaseData</th>
+      <th>Overview</th>
+      <th>Popularity</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr *ngFor="let weatherforcast of weatherforecasts">
+      <td>{{ weatherforcast.date }}</td>
+     
+    </tr>
+  </tbody>
+</table>
+
+<!--<table *ngIf="movies">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>ReleaseData</th>
+      <th>Overview</th>
+      <th>Popularity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>{{movies[1]}}</tr>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.title }}</td>
+      <td>{{ movie.releaseDate  }}</td>
+      <td>{{ movie.overview  }}</td>
+      <td>{{ movie.popularity  }}</td>
+    </tr>
+  </tbody>
+</table>-->
